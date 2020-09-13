@@ -25,7 +25,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
         }
         public static List<string> LoadFile(this string file)
         {
-            if (!File.Exists(file)) /// <-- (!File.Exists(fole)) == false
+            if (!File.Exists(file)) /// <-- (File.Exists(file)) == false
             {
                 return new List<string>();
 
