@@ -28,11 +28,6 @@ namespace TrackerLibrary
             }
         }
 
-        public static void InitializeConnections(object textFile)
-        {
-            throw new NotImplementedException();
-        }
-
         public static string CnnString(string name)
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
