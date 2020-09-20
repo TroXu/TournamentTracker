@@ -27,9 +27,12 @@ namespace TrackerLibrary.DataAccess
                 p.Add("@placeName", model.PlaceName);
                 p.Add("@prizeAmount", model.PrizeAmount);
                 p.Add("@prizePrecentage", model.PrizePrecentage);
+                p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
 
                 connection.Execute("dbo.spPrizes_Insert", p, commandType: CommandType.StoredProcedure);
                 "test".FullFilePath();
+
                 model.Id = p.Get<int>("@Id");
 
                 return model;
